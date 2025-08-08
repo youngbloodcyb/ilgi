@@ -5,6 +5,7 @@ import {
 } from '@/components/ui/resizable';
 import { Editor } from '@/components/editor';
 import { DashSettings } from './dash-settings';
+import { Input } from '@/components/ui/input';
 
 export function Dashboard() {
   return (
@@ -22,8 +23,10 @@ export function Dashboard() {
         <ResizablePanel defaultSize={25}>
           <ResizablePanelGroup direction="vertical">
             <ResizablePanel defaultSize={75}>
-              <div className="flex h-full items-center justify-center p-6">
-                <span className="font-semibold">Two</span>
+              <div className="p-6 h-full w-full relative">
+                <div className="absolute bottom-0 left-0 p-4 w-full">
+                  <Input placeholder="make a change..." />
+                </div>
               </div>
             </ResizablePanel>
             <ResizableHandle />
