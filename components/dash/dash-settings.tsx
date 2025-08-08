@@ -1,30 +1,74 @@
-import { Settings, Key, Database, Palette, Bell } from 'lucide-react';
+'use client';
+
+import { Settings, Key, Database } from 'lucide-react';
+import { motion } from 'motion/react';
+import {
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+} from '@/components/ui/tooltip';
 
 export function DashSettings() {
   return (
     <div className="flex flex-col gap-2 p-4 h-full">
-      <h3 className="text-sm font-semibold text-gray-700 mb-2">Settings</h3>
-      <div className="flex flex-col gap-1">
-        <button className="flex items-center gap-2 p-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md transition-colors">
-          <Settings size={16} />
-          <span>General</span>
-        </button>
-        <button className="flex items-center gap-2 p-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md transition-colors">
-          <Key size={16} />
-          <span>API Keys</span>
-        </button>
-        <button className="flex items-center gap-2 p-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md transition-colors">
-          <Database size={16} />
-          <span>Storage</span>
-        </button>
-        <button className="flex items-center gap-2 p-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md transition-colors">
-          <Palette size={16} />
-          <span>Theme</span>
-        </button>
-        <button className="flex items-center gap-2 p-2 text-sm text-gray-600 hover:bg-gray-100 rounded-md transition-colors">
-          <Bell size={16} />
-          <span>Notifications</span>
-        </button>
+      <div className="flex flex-row gap-1">
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <motion.button
+              type="button"
+              aria-label="General"
+              className="flex h-9 w-9 items-center justify-center text-muted-foreground rounded-md transition-colors"
+              whileHover={{ y: -3, scale: 1.1 }}
+              transition={{
+                type: 'spring',
+                stiffness: 400,
+                damping: 15,
+                bounce: 0.35,
+              }}
+            >
+              <Settings size={18} />
+            </motion.button>
+          </TooltipTrigger>
+          <TooltipContent>⌘,</TooltipContent>
+        </Tooltip>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <motion.button
+              type="button"
+              aria-label="API Keys"
+              className="flex h-9 w-9 items-center justify-center text-muted-foreground rounded-md transition-colors"
+              whileHover={{ y: -3, scale: 1.1 }}
+              transition={{
+                type: 'spring',
+                stiffness: 400,
+                damping: 15,
+                bounce: 0.35,
+              }}
+            >
+              <Key size={18} />
+            </motion.button>
+          </TooltipTrigger>
+          <TooltipContent>API Keys</TooltipContent>
+        </Tooltip>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <motion.button
+              type="button"
+              aria-label="Storage"
+              className="flex h-9 w-9 items-center justify-center text-muted-foreground rounded-md transition-colors"
+              whileHover={{ y: -3, scale: 1.1 }}
+              transition={{
+                type: 'spring',
+                stiffness: 400,
+                damping: 15,
+                bounce: 0.35,
+              }}
+            >
+              <Database size={18} />
+            </motion.button>
+          </TooltipTrigger>
+          <TooltipContent>Storage Settings</TooltipContent>
+        </Tooltip>
       </div>
     </div>
   );
