@@ -1,6 +1,6 @@
 'use client';
 
-import { Settings, Key, Database } from 'lucide-react';
+import { Settings, Key, Database, AudioLines } from 'lucide-react';
 import { motion } from 'motion/react';
 import {
   Tooltip,
@@ -124,6 +124,42 @@ export function DashSettings() {
             <div className="grid gap-4 py-4">
               <p className="text-sm text-muted-foreground">
                 Storage settings content will go here...
+              </p>
+            </div>
+          </DialogContent>
+        </Dialog>
+        <Dialog>
+          <Tooltip delayDuration={1000}>
+            <TooltipTrigger asChild>
+              <DialogTrigger asChild>
+                <motion.button
+                  type="button"
+                  aria-label="Audio Settings"
+                  className="flex h-9 w-9 items-center justify-center text-muted-foreground rounded-md transition-colors"
+                  whileHover={{ y: -3, scale: 1.1 }}
+                  transition={{
+                    type: 'spring',
+                    stiffness: 400,
+                    damping: 15,
+                    bounce: 0.35,
+                  }}
+                >
+                  <AudioLines size={18} />
+                </motion.button>
+              </DialogTrigger>
+            </TooltipTrigger>
+            <TooltipContent side="bottom">⌘⌥a</TooltipContent>
+          </Tooltip>
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Audio Settings</DialogTitle>
+              <DialogDescription>
+                Configure audio preferences and recording settings.
+              </DialogDescription>
+            </DialogHeader>
+            <div className="grid gap-4 py-4">
+              <p className="text-sm text-muted-foreground">
+                Audio settings content will go here...
               </p>
             </div>
           </DialogContent>
