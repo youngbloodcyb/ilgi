@@ -21,20 +21,14 @@ export function Dashboard() {
         </ResizablePanel>
         <ResizableHandle />
         <ResizablePanel defaultSize={25}>
-          <ResizablePanelGroup direction="vertical">
-            <ResizablePanel defaultSize={75}>
-              <div className="p-6 h-full w-full relative">
-                <div className="absolute bottom-0 left-0 p-4 w-full">
-                  <Input placeholder="make a change..." />
-                </div>
-              </div>
-            </ResizablePanel>
-            <ResizableHandle />
-            <ResizablePanel defaultSize={25}>
-              <DashSettings />
-            </ResizablePanel>
-          </ResizablePanelGroup>
+          <div className="p-6 h-full w-full relative">
+            <DashSettings />
+            <div className="absolute bottom-0 left-0 p-4 w-full">
+              <Input placeholder="make a change..." />
+            </div>
+          </div>
         </ResizablePanel>
+        <ResizableHandle />
       </ResizablePanelGroup>
     </div>
   );

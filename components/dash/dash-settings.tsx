@@ -18,10 +18,10 @@ import {
 
 export function DashSettings() {
   return (
-    <div className="flex flex-col gap-2 p-4 h-full">
+    <div className="flex flex-col gap-2 h-full">
       <div className="flex flex-row gap-1">
         <Dialog>
-          <Tooltip>
+          <Tooltip delayDuration={1000}>
             <TooltipTrigger asChild>
               <DialogTrigger asChild>
                 <motion.button
@@ -40,7 +40,7 @@ export function DashSettings() {
                 </motion.button>
               </DialogTrigger>
             </TooltipTrigger>
-            <TooltipContent>⌘,</TooltipContent>
+            <TooltipContent side="bottom">⌘⌥,</TooltipContent>
           </Tooltip>
           <DialogContent>
             <DialogHeader>
@@ -57,7 +57,7 @@ export function DashSettings() {
           </DialogContent>
         </Dialog>
         <Dialog>
-          <Tooltip>
+          <Tooltip delayDuration={1000}>
             <TooltipTrigger asChild>
               <DialogTrigger asChild>
                 <motion.button
@@ -76,7 +76,7 @@ export function DashSettings() {
                 </motion.button>
               </DialogTrigger>
             </TooltipTrigger>
-            <TooltipContent>API Keys</TooltipContent>
+            <TooltipContent side="bottom">⌘⌥k</TooltipContent>
           </Tooltip>
           <DialogContent>
             <DialogHeader>
@@ -93,7 +93,7 @@ export function DashSettings() {
           </DialogContent>
         </Dialog>
         <Dialog>
-          <Tooltip>
+          <Tooltip delayDuration={1000}>
             <TooltipTrigger asChild>
               <DialogTrigger asChild>
                 <motion.button
@@ -112,7 +112,7 @@ export function DashSettings() {
                 </motion.button>
               </DialogTrigger>
             </TooltipTrigger>
-            <TooltipContent>Storage Settings</TooltipContent>
+            <TooltipContent side="bottom">Storage Settings</TooltipContent>
           </Tooltip>
           <DialogContent>
             <DialogHeader>
