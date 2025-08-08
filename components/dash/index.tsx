@@ -3,6 +3,7 @@ import {
   ResizablePanel,
   ResizablePanelGroup,
 } from '@/components/ui/resizable';
+import { Editor } from '@/components/editor';
 
 export function Dashboard() {
   return (
@@ -12,8 +13,8 @@ export function Dashboard() {
         className="rounded-lg border h-full w-full"
       >
         <ResizablePanel defaultSize={75}>
-          <div className="flex items-center justify-center p-6">
-            <span className="font-semibold">One</span>
+          <div className="p-6 h-full w-full">
+            <Editor />
           </div>
         </ResizablePanel>
         <ResizableHandle />
