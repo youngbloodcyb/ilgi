@@ -4,6 +4,7 @@ import {
   ResizablePanelGroup,
 } from '@/components/ui/resizable';
 import { Editor } from '@/components/editor';
+import { DashSettings } from './dash-settings';
 
 export function Dashboard() {
   return (
@@ -27,9 +28,7 @@ export function Dashboard() {
             </ResizablePanel>
             <ResizableHandle />
             <ResizablePanel defaultSize={25}>
-              <div className="flex h-full items-center justify-center p-6">
-                <span className="font-semibold">Three</span>
-              </div>
+              <DashSettings />
             </ResizablePanel>
           </ResizablePanelGroup>
         </ResizablePanel>
